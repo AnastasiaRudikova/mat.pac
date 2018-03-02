@@ -1,0 +1,23 @@
+function [ S ] = structure(V,I)
+
+l=length(V)
+  % if (I>lgth)
+        
+  % end
+m=50/I
+g=1; %% номер элемента в интервальном массиве
+j=1; %% номер элемента V
+h=1; %% номер интервала
+S(I,1) = struct('STRUCTURE',[]);
+    while(j<l+1)
+        W(g)=V(j);
+        g=g+1;
+        j=j+1;
+        if (j>m)
+            g=1;
+            m=m+50/I;
+            S(h).STRUCTURE = W
+            h=h+1;
+        end
+    end
+end
